@@ -62,6 +62,11 @@ export class TeamValidate {
             .notEmpty()
             .withMessage({ en: 'bank_name is required' }),
     ]
+    static addWork = [
+        body('name').trim()
+            .notEmpty()
+            .withMessage({ en: ' work name is required' }),
+    ]
     
     static updateTeam = [
         param('id')

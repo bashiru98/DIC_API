@@ -20,6 +20,11 @@ import fetchTeamMembers from "./routes/fetchTeamMembers";
 import updateTeamMember from "./routes/updateTeamMember";
 import getOneTeam from "./routes/getOneTeam";
 import getOneTeamMember from "./routes/getOneTeamMember";
+import getWork from "./routes/getWork";
+import updateWork from "./routes/updateWork";
+import fetchWorks from "./routes/fetchWorks";
+import addWork from "./routes/addWork";
+
 
 
 routes.use("/users", [
@@ -42,8 +47,11 @@ routes.use("/users", [
     addNewTeamMember,
     updateTeamMember,
     getOneTeam,
-    getOneTeamMember
-
+    getOneTeamMember,
+    getWork,
+    updateWork,
+    fetchWorks,
+    addWork,
 ]);
 
 

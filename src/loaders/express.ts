@@ -2,7 +2,6 @@ import express, { Request, Response, NextFunction } from 'express';
 import cors from "cors";
 const rateLimit = require('express-rate-limit');
 import compression from "compression";
-import morgan from "morgan";
 import helmet from "helmet";
 import { errorHandler } from '../middlewares/error-handler';
 import { NotFoundError } from '../utils/common/errors/not-found-error';
