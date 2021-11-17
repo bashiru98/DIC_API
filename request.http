@@ -1,0 +1,90 @@
+http://localhost:3000/api/users/register
+
+###
+
+POST http://localhost:3000/api/users/register HTTP/1.1
+content-type: application/json
+
+{
+
+  "email":"bukariatulebashiru@gmail.com",
+  "password":"bashiru"
+}
+
+###
+
+POST http://localhost:3000/api/users/signin HTTP/1.1
+content-type: application/json
+
+{
+   "email":"bukariatulebashiru@gmail.com",
+  "password":"bashiru98"
+}
+
+###
+
+POST http://localhost:3000/api/users/refresh_token HTTP/1.1
+content-type: application/json
+
+
+{
+  "refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwY2E0MTJhMzQ4OGRlNTMwOGViYjVlOSIsImVtYWlsIjoiYnVrYXJpYXR1bGViYXNoaXJ1QGdtYWlsLmNvbSIsImlhdCI6MTYyNDM3ODU0OSwiZXhwIjoxNjU1OTM2MTQ5LCJhdWQiOiI2MGNhNDEyYTM0ODhkZTUzMDhlYmI1ZTkiLCJpc3MiOiJ5c2JhY2tlbmR0ZWFtIn0.niQD-4bARj4P_yfU-VKAYcFbZaKx5lowDGjSa-0ZfjQ"
+ 
+}
+###
+
+
+GET http://localhost:3000/api/users/currentuser HTTP/1.1
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwY2E0MTJhMzQ4OGRlNTMwOGViYjVlOSIsImVtYWlsIjoiYnVrYXJpYXR1bGViYXNoaXJ1QGdtYWlsLmNvbSIsImlhdCI6MTYyNDM3ODUxMywiZXhwIjoxNjI0MzgyMTEzLCJhdWQiOiI2MGNhNDEyYTM0ODhkZTUzMDhlYmI1ZTkiLCJpc3MiOiJ5c2JhY2tlbmR0ZWFtIn0.o4-yVzvRLxcnv4tq15oIUmlnzhxTgUBafPcA3dddd4c
+
+###
+
+get http://localhost:3005/users/email HTTP/1.1
+
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwYzhjZGY5YTg5ZWZiM2NjMDU4NjIxNCIsImVtYWlsIjoiYmFzaGlydTFAZ21haWwuY29tIiwiaWF0IjoxNjIzNzgxMjA4LCJleHAiOjE2MjM3ODQ4MDgsImF1ZCI6IjYwYzhjZGY5YTg5ZWZiM2NjMDU4NjIxNCIsImlzcyI6InlzYmFja2VuZHRlYW0ifQ.2DZLGg4Jh1q8T4TLLR1fcOzIf9YS3-dIk31omkFnANM
+
+content-type: application/json
+
+
+###
+
+
+PUT http://localhost:3000/api/users/confirm_email HTTP/1.1
+content-type: application/json
+
+{
+   "code":"461066"
+  
+}
+
+###
+
+
+PUT http://localhost:3000/api/users/update_password HTTP/1.1
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwY2E0MTJhMzQ4OGRlNTMwOGViYjVlOSIsImVtYWlsIjoiYnVrYXJpYXR1bGViYXNoaXJ1QGdtYWlsLmNvbSIsImlhdCI6MTYyMzg3MzIzMiwiZXhwIjoxNjIzODc2ODMyLCJhdWQiOiI2MGNhNDEyYTM0ODhkZTUzMDhlYmI1ZTkiLCJpc3MiOiJ5c2JhY2tlbmR0ZWFtIn0.yoqkmEOo4YxY6vo8qbpsUC6ipD2hD59AnVPL478cWMc
+content-type: application/json
+
+{
+   "newPassword":"bashiru2",
+   "currentPassword":"bashiru1"
+  
+}
+
+###
+POST http://localhost:3000/api/users/forget_password HTTP/1.1
+content-type: application/json
+
+{
+   "email":"bukariatulebashiru@gmail.com"
+  
+}
+
+###
+PUT http://localhost:3000/api/users/reset_password HTTP/1.1
+content-type: application/json
+
+{
+   "resetCode":"269382",
+   "password":"bashiru98"
+  
+}
