@@ -24,34 +24,24 @@ import getWork from "./routes/getWork";
 import updateWork from "./routes/updateWork";
 import fetchWorks from "./routes/fetchWorks";
 import addWork from "./routes/addWork";
+import addWorkers from "./routes/addWorkers";
 
 
 
 routes.use("/users", [
-    currentUser,
-    admin_signin,
-    staff_signin,
-    update_password,
-    reset_password,
-    forget_password,
-    deleteUser,
-    getUsers,
-    getProfile,
-    updateUser,
-    admin_register,
-    staff_register,
-    newTeam,
-    fetchTeams,
-    fetchTeamMembers,
-    updateTeam,
-    addNewTeamMember,
-    updateTeamMember,
-    getOneTeam,
-    getOneTeamMember,
-    getWork,
-    updateWork,
-    fetchWorks,
-    addWork,
+    currentUser,admin_signin,
+    staff_signin,update_password,
+    reset_password,forget_password,
+    deleteUser,getUsers,
+    getProfile,updateUser,
+    admin_register,staff_register,
+    newTeam,fetchTeams,
+    fetchTeamMembers, updateTeam,
+    addNewTeamMember,updateTeamMember,
+    getOneTeam,getOneTeamMember,
+    getWork, updateWork,
+    fetchWorks,addWork,
+    addWorkers
 ]);
 
 

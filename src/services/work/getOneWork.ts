@@ -5,7 +5,7 @@ import { Work } from "../../models/work";
 export = async (req: Request, res: Response) => {
   try {
     const id = req.params.id;
-    const work = await Work.findById(id);
+    const work = await Work.findById(id).populate("workers");
     if(!work){
         return res.status(400).json({
             errors: [{
