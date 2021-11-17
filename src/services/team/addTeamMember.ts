@@ -5,6 +5,7 @@ import { TeamMember } from '../../models/team_member';
 export =  async (req: Request, res: Response) => {
     try {
         const { name,team,
+          phone_number,
             bank_account_number,
             bank_ifsc_code,branch_name,
             bank_name } = req.body;
@@ -21,7 +22,7 @@ export =  async (req: Request, res: Response) => {
         }
       
     let newTeamMember = TeamMember.build({name,team,
-
+    phone_number,
     bank_account_info:{
         bank_name,
         branch_name,

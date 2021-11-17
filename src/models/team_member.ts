@@ -3,6 +3,7 @@ import mongoose, { Schema } from "mongoose";
 
 interface TeamMemberAttrs {
 name: string;
+phone_number:string;
 team:string
 bank_account_info:{
 bank_account_number: string;
@@ -15,6 +16,7 @@ bank_name:string;
 
 interface TeamMemberDoc extends mongoose.Document {
 name: string;
+phone_number: string;
 team:string;
 bank_account_info: {
 bank_acount_number: string;
@@ -40,7 +42,9 @@ const teamMemberSchema = new mongoose.Schema(
       type: Schema.Types.ObjectId,
       ref:"Team",
     },
-
+  phone_number:{
+    type:String,
+  },
     bank_account_info:{
 
     bank_account_number: {

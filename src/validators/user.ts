@@ -66,10 +66,9 @@ export class UserValidate {
     ]
     static getUser = [
         param('id')
-        .not()
-        .isEmpty()
-        .custom((input:string)=>{mongoose.Types.ObjectId.isValid(input)})
-        .withMessage({en:'User id is required'}),
+        .exists()
+        .isMongoId()
+        .withMessage({en:'User id is required or must be valid'}),
     ]
     
 }
