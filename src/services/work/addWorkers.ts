@@ -5,11 +5,10 @@ import { Work } from '../../models/work';
 export =  async (req: Request, res: Response) => {
     try {
         const id = req.params.id;
-        const {
-        workers,
-        } = req.body;
+    
+       const input =  req.body;
         
-        if(!workers || workers.length <= 0) {
+        if(!input || input.length <= 0) {
             return res.status(400).json({
                 errors: [{
                   "message": {
@@ -29,12 +28,12 @@ export =  async (req: Request, res: Response) => {
             }]
           })
         }
-        
+
         const work = await Work.findByIdAndUpdate(
             id,
             {
               $addToSet:{
-               workers:workers
+               ...input
               }
             },
             {

@@ -23,7 +23,13 @@ const workSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    workers: [{
+    workers_44: [{
+      type: Schema.Types.ObjectId,
+      ref:"Team_Member",
+      default:[]
+    }],
+    
+    workers_58: [{
       type: Schema.Types.ObjectId,
       ref:"Team_Member",
       default:[]

@@ -25,6 +25,7 @@ import updateWork from "./routes/updateWork";
 import fetchWorks from "./routes/fetchWorks";
 import addWork from "./routes/addWork";
 import addWorkers from "./routes/addWorkers";
+import getSpecificTeamM from "./routes/getSpecificTeamM";
 
 
 
@@ -41,7 +42,8 @@ routes.use("/users", [
     getOneTeam,getOneTeamMember,
     getWork, updateWork,
     fetchWorks,addWork,
-    addWorkers
+    addWorkers,
+    getSpecificTeamM
 ]);
 
 
